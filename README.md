@@ -53,6 +53,18 @@ http://localhost:8080
 
 `npm run dev`가 켜져 있는 동안에는 `vault` 안의 `.md` 파일을 추가하거나 수정하면 자동으로 다시 빌드됩니다.
 
+다른 포트로 실행해야 한다면 `--port`를 지정합니다.
+
+```bash
+npm run quartz -- build --serve --watch -d vault -o public --port 9090
+```
+
+같은 네트워크의 다른 기기에서는 아래처럼 접속할 수 있습니다.
+
+```text
+http://YOUR_LOCAL_IP:9090
+```
+
 ## Build Static Site
 
 ```bash
