@@ -1,6 +1,6 @@
 {
-  "name": "@jackyzha0/quartz",
-  "description": "🌱 publish your digital garden and notes as a website",
+  "name": "quartz-from-vault",
+  "description": "Publish the Markdown files in ./vault as a Quartz static site",
   "private": true,
   "version": "4.5.2",
   "type": "module",
@@ -13,6 +13,8 @@
   },
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
+    "build": "npx quartz build -d vault -o public",
+    "dev": "npx quartz build --serve --watch -d vault -o public",
     "docs": "npx quartz build --serve -d docs",
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",

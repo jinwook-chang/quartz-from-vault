@@ -1,17 +1,27 @@
-# Quartz v4
+# Quartz from Vault
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+`vault` 폴더에 Obsidian Markdown 파일을 넣으면 Quartz 정적 사이트로 빌드됩니다.
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+## 사용법
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+```bash
+npm install
+npm run build
+```
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+빌드 결과는 `public` 폴더에 생성됩니다.
 
-## Sponsors
+로컬에서 확인하려면:
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+```bash
+npm run dev
+```
+
+기본 주소는 `http://localhost:8080`입니다.
+
+## 폴더
+
+- `vault/`: Obsidian Markdown 노트
+- `public/`: 빌드된 정적 사이트
+- `quartz.config.ts`: 사이트 설정
+- `quartz.layout.ts`: 페이지 레이아웃과 graph/search/explorer 구성
